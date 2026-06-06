@@ -35,8 +35,8 @@ public class ClientHandler extends Thread {
                         this.username = value;
                         break;
                     case "MESSAGE":
-                        System.out.println(this.username + ':' + value);
-                        broadcast(this.username + ':' + value);
+                        System.out.println(this.username + ": " + value);
+                        broadcast(this.username + ": " + value);
                         break;
                     default:
                         disconnect(client);
