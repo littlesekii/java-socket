@@ -9,6 +9,11 @@
 
     <artifactId>client</artifactId>
 
+    <properties>
+        <maven.compile.source>25</maven.compile.source>
+        <maven.compile.target>25</maven.compile.target>
+    </properties>
+
     <dependencies>
 
         <dependency>

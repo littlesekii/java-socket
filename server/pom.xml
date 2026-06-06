@@ -6,8 +6,13 @@
         <artifactId>socket-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
+    
     <artifactId>server</artifactId>
+
+    <properties>
+        <maven.compile.source>25</maven.compile.source>
+        <maven.compile.target>25</maven.compile.target>
+    </properties>
 
     <dependencies>
 
