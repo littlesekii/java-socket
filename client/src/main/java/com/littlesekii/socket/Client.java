@@ -38,6 +38,9 @@ public class Client {
 
             System.out.print("Enter your username: ");
             username = ioReader.readLine();
+
+            writer.println("USERNAME:" + username);
+
             terminal.puts(InfoCmp.Capability.clear_screen);
             terminal.flush();
 
@@ -61,7 +64,7 @@ public class Client {
                 terminal.writer().print("\033[2K");
                 terminal.flush();
 
-                writer.println(username + ": " + message);
+                writer.println("MESSAGE:" + message);
             }
 
         } catch (IOException e) {
