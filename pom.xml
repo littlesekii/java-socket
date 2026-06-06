@@ -7,6 +7,11 @@
 
     <packaging>pom</packaging>
 
+    <properties>
+        <maven.compile.source>25</maven.compile.source>
+        <maven.compile.target>25</maven.compile.target>
+    </properties>
+
     <modules>
         <module>common</module>
         <module>client</module>
