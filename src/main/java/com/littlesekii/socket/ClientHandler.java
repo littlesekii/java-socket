@@ -25,11 +25,17 @@ public class ClientHandler extends Thread {
 
             String message;
             while ((message = reader.readLine()) != null) {
+                if (message.contains("GET")){
+                    System.out.println("Client disconnected (" 
+                        + client.getInetAddress().getHostAddress() + ":"
+                        + client.getPort() + ")");
+                    Server.clientHandlers.remove(this);
+                    client.close();
+                    continue;
+                }
                 System.out.println(message);
                 broadcast(message);
             }
-            System.out.println(message);
-
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
